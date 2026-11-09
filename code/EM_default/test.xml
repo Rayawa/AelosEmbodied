@@ -1,0 +1,198 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="X(1Cr3tvZ7)XkJ(jD_tK">A</variable>
+  </variables>
+  <block type="start" id="!JODDDpDPuBO86x3{r0}" deletable="false" x="153" y="175">
+    <statement name="do">
+      <block type="aelos_while" id="Cp}.E+_]WvA%2#OW!+zT">
+        <value name="condition">
+          <block type="logic_boolean" id="8OjCU8/Wj3#v.5dy`-OC">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="do">
+          <block type="remote_control" id="Yp%TpIPJ9t)N_9YYr4=.">
+            <value name="variable">
+              <block type="variables_get" id="{LAfaT[QAmOy)Y`b0(yx">
+                <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+              </block>
+            </value>
+            <next>
+              <block type="aelos_if" id="VU}e`Gp*pY{KcngGbF,0">
+                <value name="condition">
+                  <block type="aelos_compare" id="roJu.Izblf`_ci[ST(B(">
+                    <field name="OP">JNE</field>
+                    <value name="input_1">
+                      <block type="variables_get" id="ooa~-*bXpddlHq$}FKwG">
+                        <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                      </block>
+                    </value>
+                    <value name="input_2">
+                      <block type="remote_control_button" id=")jx3=u]cr-+1}5{cr,*V">
+                        <field name="mode">Perform</field>
+                        <field name="key">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="do">
+                  <block type="music" id=")qW#eH.{vXp*p$fHw!XT">
+                    <field name="music_name">JG</field>
+                    <next>
+                      <block type="Back_Bow" id="=c(nJjCu;OFNd/fVdC0j"></block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="aelos_if" id="3+lG^6_KbTZy3sB(KOJK">
+                    <value name="condition">
+                      <block type="aelos_compare" id="6#@aU9uLkWxup$pSb$sp">
+                        <field name="OP">JNE</field>
+                        <value name="input_1">
+                          <block type="variables_get" id="X49_M|y*69Toz+pGsE_3">
+                            <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                          </block>
+                        </value>
+                        <value name="input_2">
+                          <block type="remote_control_button" id="s?~5Xq,dQd:q~?6PnUS@">
+                            <field name="mode">Perform</field>
+                            <field name="key">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="do">
+                      <block type="music" id="u-6AcpAElSI@-}Fp%h1A">
+                        <field name="music_name">DL</field>
+                        <next>
+                          <block type="1742586464334" id="C3:F!-9Q}0fx$C68A]ih"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="aelos_if" id="![4*^nnj8X0]}sS?JXoU">
+                        <value name="condition">
+                          <block type="aelos_compare" id=";06+JXp{c99AdLZx(gG7">
+                            <field name="OP">JNE</field>
+                            <value name="input_1">
+                              <block type="variables_get" id="JG/So:[6{B.nbgExA{b2">
+                                <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                              </block>
+                            </value>
+                            <value name="input_2">
+                              <block type="remote_control_button" id="bzS9:r1%-D^OAVk7?-8x">
+                                <field name="mode">Perform</field>
+                                <field name="key">3</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="do">
+                          <block type="music" id="zjt26dvp^EM2~4EU;.=q">
+                            <field name="music_name">DPZC</field>
+                            <next>
+                              <block type="Spread_wings" id="zjm`-:nX{^m2uve6pFY!"></block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="aelos_if" id="+Ra(nZ{[1ublKsTN!`ad">
+                            <value name="condition">
+                              <block type="aelos_compare" id="xjC{#Dn9Ts?Uxb4N$Mpp">
+                                <field name="OP">JNE</field>
+                                <value name="input_1">
+                                  <block type="variables_get" id="Kihd%0f@b@_jXa*yMCZt">
+                                    <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                                  </block>
+                                </value>
+                                <value name="input_2">
+                                  <block type="remote_control_button" id="$*hc23[UK*+G0`WM.Kh)">
+                                    <field name="mode">Perform</field>
+                                    <field name="key">4</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="do">
+                              <block type="music" id="35T@ApE5ZFz0JdU]~IIe">
+                                <field name="music_name">ZJSM</field>
+                                <next>
+                                  <block type="Left_foot_shot" id="mv)6Y}*%3k{Tz;w7(SLS"></block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="aelos_if" id="~DUBg~psC1|Iiqdr[vV@">
+                                <value name="condition">
+                                  <block type="aelos_compare" id="P(~w)37}4f(3Has_ljF`">
+                                    <field name="OP">JNE</field>
+                                    <value name="input_1">
+                                      <block type="variables_get" id="5#5g(?MEid8:VLx)4Z3}">
+                                        <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                                      </block>
+                                    </value>
+                                    <value name="input_2">
+                                      <block type="remote_control_button" id="RSIH]p-e#+a~qX=}2]Ek">
+                                        <field name="mode">Perform</field>
+                                        <field name="key">X</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="do">
+                                  <block type="music" id="qIlaJucJ!uh^ylHYJA)D">
+                                    <field name="music_name">少年</field>
+                                    <next>
+                                      <block type="1742586515751" id="LAq{J/m?QAaFhV!#eY.s"></block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="aelos_if" id="]w8S$dU*VQ/?@{OU]U!/">
+                                    <value name="condition">
+                                      <block type="aelos_compare" id="OV,O1M3i6-ZzJ9T.id{T">
+                                        <field name="OP">JNE</field>
+                                        <value name="input_1">
+                                          <block type="variables_get" id="0YlFzio,O^5p}1$w[S=p">
+                                            <field name="VAR" id="X(1Cr3tvZ7)XkJ(jD_tK" variabletype="">A</field>
+                                          </block>
+                                        </value>
+                                        <value name="input_2">
+                                          <block type="remote_control_button" id="(d@!S9*7yK#qyI1y+R.g">
+                                            <field name="mode">Perform</field>
+                                            <field name="key">Y</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="do">
+                                      <block type="music" id="=lbDOhY-*@mF6@S7N@tw">
+                                        <field name="music_name">科目三</field>
+                                        <next>
+                                          <block type="1742586487533" id="z.{%Tp+,}74h*#?NG+6d"></block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="delayed" id="-z(aH*d[v`-qL|SGYV[d">
+                                        <field name="time">0.2</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

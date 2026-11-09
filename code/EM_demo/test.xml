@@ -1,0 +1,631 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="auAnh]X#7igvJ5x@u$m!">tag_x</variable>
+    <variable type="" id="(,680k=r`BADF.(5=%JN">green_x</variable>
+    <variable type="" id="Je=bn/0Kf!7StlrkM%jJ">tag_y</variable>
+    <variable type="" id="KDK/6?Hn7Guep_JPlTQm">green_y</variable>
+    <variable type="" id=",U|)?%{oGRSZS?bI|4vW">tag_yaw</variable>
+  </variables>
+  <block type="start" id="!JODDDpDPuBO86x3{r0}" deletable="false" x="-531" y="-707">
+    <statement name="do">
+      <block type="procedures_callnoreturn" id="L0ZQ%a(^5VVqaKB#1FT)">
+        <mutation name="地点1"></mutation>
+        <next>
+          <block type="aelos_for" id="=mNrZ_%`z+XNe7IfSBuf">
+            <value name="times">
+              <block type="math_number" id="m3J2CsL{?lJP)x7FS#+R">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <statement name="do">
+              <block type="1746753945332" id="Y,=5G8LD)kAe4~o]9jjq"></block>
+            </statement>
+            <next>
+              <block type="procedures_callnoreturn" id="}#0|%TypdBps7EtV.xeI">
+                <mutation name="地点2"></mutation>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="e.MPt;,NER:A)X(wT;MJ" x="-1081" y="-597">
+    <field name="NAME">地点1</field>
+    <comment pinned="false" h="80" w="160">描述该功能...</comment>
+    <statement name="STACK">
+      <block type="aelos_while" id="l7;/AJsrVB^^e.9e)hl,">
+        <value name="condition">
+          <block type="logic_boolean" id="/%4M!n2xcEcsw%F)rvVL">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="do">
+          <block type="aelos_if" id="=@Wc^t+)fd9_X0@p1GZK">
+            <value name="condition">
+              <block type="identify_label_number" id="gq)%[~0XY%yKji,h`YGQ">
+                <field name="camera">chest</field>
+                <field name="number">11</field>
+              </block>
+            </value>
+            <statement name="do">
+              <block type="variables_set" id="nrV*]5U$UXbuh,kvJ9Xv">
+                <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+                <value name="VALUE">
+                  <block type="read_distance" id=".n?AN${zvr(mv)uU=AT_">
+                    <field name="camera">chest</field>
+                    <field name="number">11</field>
+                    <field name="axis">x</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="$tx|/%-ePRwIPSn-#kc.">
+                    <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                    <value name="VALUE">
+                      <block type="read_distance" id="txK|9]^|RzPSC3S7veX}">
+                        <field name="camera">chest</field>
+                        <field name="number">11</field>
+                        <field name="axis">y</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="_?DnSyI1i%O,BJQMIiba">
+                        <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="4sdy0a6UE;Bpp+4e}[lJ">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="MF.g~s8|,|v!9e-2^ilq">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="read_yaw_angle" id="I%PXq0Ze[Pm^=0kcMxK0">
+                                <field name="camera">chest</field>
+                                <field name="number">11</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="aoq{)2NA+OqwA-PF}ij@">
+                                <field name="NUM">90</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="aelos_if_else" id="y*@q^M{`0Bm#a~oBq?1W">
+                            <value name="condition">
+                              <block type="aelos_compare" id="nJunbM_%p76M4Y,GUFt{">
+                                <field name="OP">JBE</field>
+                                <value name="input_1">
+                                  <block type="variables_get" id="qU*3I$J!4FC|Xs5^IUqF">
+                                    <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                                  </block>
+                                </value>
+                                <value name="input_2">
+                                  <block type="math_number" id="ZKY-vsw]eYBQoB%j:yS.">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="if_do">
+                              <block type="1746753994804" id="B-Fr7829}VCb)$R6.eC#"></block>
+                            </statement>
+                            <statement name="else_do">
+                              <block type="aelos_if_else" id="6]a$S@W.t+))hD8}=z?%">
+                                <value name="condition">
+                                  <block type="aelos_compare" id="=,P8Ly/m.fb(rxEZ+Xqn">
+                                    <field name="OP">JAE</field>
+                                    <value name="input_1">
+                                      <block type="variables_get" id=";E8ItqvqEy9HzOk7hkhy">
+                                        <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                                      </block>
+                                    </value>
+                                    <value name="input_2">
+                                      <block type="math_number" id="d$2a-]hWN+5r}2(K;B*%">
+                                        <field name="NUM">-10</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="if_do">
+                                  <block type="1746753985253" id="~ZrZR`|Qs;Ec~Lp[QdAK"></block>
+                                </statement>
+                                <statement name="else_do">
+                                  <block type="aelos_if_else" id="2UVj6Jlpi)jVD@HY]6|x">
+                                    <value name="condition">
+                                      <block type="aelos_compare" id="7za{-a:dj9X,?2kFX2C2">
+                                        <field name="OP">JBE</field>
+                                        <value name="input_1">
+                                          <block type="variables_get" id="F5=dahS2GiIpU}Wn1~YC">
+                                            <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                                          </block>
+                                        </value>
+                                        <value name="input_2">
+                                          <block type="math_number" id="hwu@#Y]lR5798b$#~S0e">
+                                            <field name="NUM">0.03</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="if_do">
+                                      <block type="1746753990478" id="BJ~DXH8DHYlM=Jgj2P;g"></block>
+                                    </statement>
+                                    <statement name="else_do">
+                                      <block type="aelos_if_else" id="R-sAC-mYRl$7Hg:_xZp0">
+                                        <value name="condition">
+                                          <block type="aelos_compare" id="MzBZNl7~|6Wr`YpAd*/%">
+                                            <field name="OP">JAE</field>
+                                            <value name="input_1">
+                                              <block type="variables_get" id="S+UMh:|L41nqYl#W_r,u">
+                                                <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                                              </block>
+                                            </value>
+                                            <value name="input_2">
+                                              <block type="math_number" id="/jf6@R9`!}DQnH=lP.ZM">
+                                                <field name="NUM">-0.03</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="if_do">
+                                          <block type="1746753981001" id="j*.=(]{2`=aiGZf(7sUa"></block>
+                                        </statement>
+                                        <statement name="else_do">
+                                          <block type="aelos_if_else" id="_5|k_-`oZ[7l#-=t,=+g">
+                                            <value name="condition">
+                                              <block type="aelos_compare" id="GBoT8zE;da`JGmsQf]bL">
+                                                <field name="OP">JBE</field>
+                                                <value name="input_1">
+                                                  <block type="variables_get" id="2OHCsTXinNZB4GAQT),5">
+                                                    <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+                                                  </block>
+                                                </value>
+                                                <value name="input_2">
+                                                  <block type="math_number" id="kdl=v(wnDlLbNR2*`wdU">
+                                                    <field name="NUM">0.07</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="if_do">
+                                              <block type="1746754892365" id="6P@qI0*-.m5?ELQdP$8|"></block>
+                                            </statement>
+                                            <statement name="else_do">
+                                              <block type="1746769707395" id="^vbUgiHso|8:WXHoRO$o">
+                                                <next>
+                                                  <block type="1746753935546" id="G[T{soO$NCgv0T0@Oe5n">
+                                                    <next>
+                                                      <block type="loop" id="_^cNk@s;)IlvDih1*gk$"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="Q(}0uY9A|s7lWgSc^]EB" x="-293" y="-598">
+    <field name="NAME">地点2</field>
+    <comment pinned="false" h="80" w="160">描述该功能...</comment>
+    <statement name="STACK">
+      <block type="aelos_while" id="3cufCB$iRK*3v^`lbN?/">
+        <value name="condition">
+          <block type="logic_boolean" id="!)Pi~M1i9P4j2NLXZ,ag">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="do">
+          <block type="aelos_if" id="`anX?ySr|Y7u/mfPjLnp">
+            <value name="condition">
+              <block type="identify_label_number" id="`!*!`G/O:pDVWw[.{G.H">
+                <field name="camera">chest</field>
+                <field name="number">12</field>
+              </block>
+            </value>
+            <statement name="do">
+              <block type="variables_set" id="F([36j_]~RlrmZ88,kow">
+                <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+                <value name="VALUE">
+                  <block type="read_distance" id="1}r7FJ._BHiBE*Qzd7,=">
+                    <field name="camera">chest</field>
+                    <field name="number">12</field>
+                    <field name="axis">x</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="oQhcD}.:/B6s]M~]V*VA">
+                    <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                    <value name="VALUE">
+                      <block type="read_distance" id="6Vq(=%|-S|.r`NAF(=Cj">
+                        <field name="camera">chest</field>
+                        <field name="number">12</field>
+                        <field name="axis">y</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="%@4^9As2rkbH}?_+O+1V">
+                        <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="W)rz%eH@Vp_K[l}8hc}T">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <shadow type="math_number" id="MF.g~s8|,|v!9e-2^ilq">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="read_yaw_angle" id="/=Kxc{}0c4Swrbr4l#Wk">
+                                <field name="camera">chest</field>
+                                <field name="number">12</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="math_number" id="GRcQqPzeMy0Y(L}9l^-R">
+                                <field name="NUM">90</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="aelos_if_else" id="0m3t6][dmGKp.)zN9j1s">
+                            <value name="condition">
+                              <block type="aelos_compare" id="r6`yE{y4Kog1i*/5TZ,l">
+                                <field name="OP">JBE</field>
+                                <value name="input_1">
+                                  <block type="variables_get" id=":I5DZe8xgz[|NnYj`OX6">
+                                    <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                                  </block>
+                                </value>
+                                <value name="input_2">
+                                  <block type="math_number" id="*}r*;qRz@V7Aqg-dAoCq">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="if_do">
+                              <block type="1746753994804" id="Vxix15`[BaqI6QJlifOy"></block>
+                            </statement>
+                            <statement name="else_do">
+                              <block type="aelos_if_else" id=":)OimX^j}xLk$WRNzUS?">
+                                <value name="condition">
+                                  <block type="aelos_compare" id=",Zc})9eOJ/T]0h1NCk01">
+                                    <field name="OP">JAE</field>
+                                    <value name="input_1">
+                                      <block type="variables_get" id="ml6YSVx~UarMDLYg.}~c">
+                                        <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                                      </block>
+                                    </value>
+                                    <value name="input_2">
+                                      <block type="math_number" id=",#n~eo*)M!IaniTI?}9;">
+                                        <field name="NUM">-10</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="if_do">
+                                  <block type="1746753985253" id="KpArUPZOb7WCP{z$^%7$"></block>
+                                </statement>
+                                <statement name="else_do">
+                                  <block type="aelos_if_else" id="{bY6Q`3}IlxLYk]6SOO|">
+                                    <value name="condition">
+                                      <block type="aelos_compare" id="Ed$NOs!RGF_JMW-,IiF)">
+                                        <field name="OP">JBE</field>
+                                        <value name="input_1">
+                                          <block type="variables_get" id="ZGi)cgN9c.@maz.KwWr%">
+                                            <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                                          </block>
+                                        </value>
+                                        <value name="input_2">
+                                          <block type="math_number" id="1LWj!+[-K|]M~[v0RC2T">
+                                            <field name="NUM">0.03</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="if_do">
+                                      <block type="1746753990478" id="1frlQK~_]C_*_3u$kMk)"></block>
+                                    </statement>
+                                    <statement name="else_do">
+                                      <block type="aelos_if_else" id="HhC-%/;EM)mm~|aPYe{9">
+                                        <value name="condition">
+                                          <block type="aelos_compare" id="lO={pdnGQn8UknGw~CUJ">
+                                            <field name="OP">JAE</field>
+                                            <value name="input_1">
+                                              <block type="variables_get" id="3DRl8HS_#P)GEELtDxXd">
+                                                <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+                                              </block>
+                                            </value>
+                                            <value name="input_2">
+                                              <block type="math_number" id=",al!vxx0AmJ=Z*/%CqRm">
+                                                <field name="NUM">-0.03</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="if_do">
+                                          <block type="1746753981001" id="i4EkGe:4Mc)f!?79ff92"></block>
+                                        </statement>
+                                        <statement name="else_do">
+                                          <block type="aelos_if_else" id="or=*7}kRBfoip`}mUgtA">
+                                            <value name="condition">
+                                              <block type="aelos_compare" id="k}+5=t8b3wv0lY_t{VU[">
+                                                <field name="OP">JBE</field>
+                                                <value name="input_1">
+                                                  <block type="variables_get" id="G0egSJfq_zp=lso.b~^y">
+                                                    <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+                                                  </block>
+                                                </value>
+                                                <value name="input_2">
+                                                  <block type="math_number" id="5g-CDz[}%cA]I{6]5g]Y">
+                                                    <field name="NUM">0.07</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="if_do">
+                                              <block type="1746754892365" id="p2c%~[ix3D6Tw2n.s`-R"></block>
+                                            </statement>
+                                            <statement name="else_do">
+                                              <block type="1746769707395" id="eP-.BDIixgG#6Wk59+5Z">
+                                                <next>
+                                                  <block type="1746753935546" id=",1k})$LKB}yeX*7s/-b^">
+                                                    <next>
+                                                      <block type="loop" id="=[6cVUrK@+J0#rHc:`$:"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </statement>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="aelos_while" id="x2~1G2lwb,K3usg3KOEw" x="530" y="-94">
+    <value name="condition">
+      <block type="logic_boolean" id="NQJ3irk8~n5QAbW;E@ke">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="do">
+      <block type="aelos_if" id="]@F.S{s/MH6QW[d[)gVL">
+        <value name="condition">
+          <block type="identify_label_number" id="nbZeO7yT-Wm3WhopRb@u">
+            <field name="camera">chest</field>
+            <field name="number">11</field>
+          </block>
+        </value>
+        <statement name="do">
+          <block type="Squat" id="7v0JKuNir1zs2~#X(P]G"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="aelos_if" id="exrp:.K9FdOig{n8_Jh{" x="521" y="78">
+    <value name="condition">
+      <block type="identify_label_number" id="b$sQik.(.Yv5gXXKGy94">
+        <field name="camera">chest</field>
+        <field name="number">11</field>
+      </block>
+    </value>
+    <statement name="do">
+      <block type="variables_set" id="4u30OXkR~oomJ92bjC05">
+        <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+        <value name="VALUE">
+          <block type="read_distance" id="7r!0VFQ%4J4iG](zbTmJ">
+            <field name="camera">chest</field>
+            <field name="number">11</field>
+            <field name="axis">x</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Sw/T/74f`^+XEYHwnWTQ">
+            <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+            <value name="VALUE">
+              <block type="read_distance" id="@wYg/:JpuJ1)NJwTFc(%">
+                <field name="camera">chest</field>
+                <field name="number">11</field>
+                <field name="axis">y</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id=")6t6D+jR^B)W}[n@?_^-">
+                <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                <value name="VALUE">
+                  <block type="read_yaw_angle" id="guhZ,7N/S!pTl;}PR;DG">
+                    <field name="camera">chest</field>
+                    <field name="number">11</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="aelos_while" id=":4(#l();$l~Bp]Vwe~10" x="-796" y="360">
+    <value name="condition">
+      <block type="logic_boolean" id="#Xl@yj:~[gcJ_G9r4$FB">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="do">
+      <block type="color_identification_rgbhsv" id="/5{.7W*N5a~25/LM^)5,">
+        <field name="camera">chest</field>
+        <field name="colour">#33ff33</field>
+        <field name="hmin">40</field>
+        <field name="hmax">60</field>
+        <field name="smin">30</field>
+        <field name="smax">120</field>
+        <field name="vmin">100</field>
+        <field name="vmax">200</field>
+        <next>
+          <block type="variables_set" id="2Ep.6h~=/1x?(X9JJc~L">
+            <field name="VAR" id="(,680k=r`BADF.(5=%JN" variabletype="">green_x</field>
+            <value name="VALUE">
+              <block type="color_rgbhsv_central_coordinate" id="5.nd,VmGks)TqP~K1I@K">
+                <field name="camera">chest</field>
+                <field name="axis">0</field>
+                <field name="hmin">40</field>
+                <field name="hmax">60</field>
+                <field name="smin">30</field>
+                <field name="smax">120</field>
+                <field name="vmin">100</field>
+                <field name="vmax">200</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="1kCKe9:,xB@hEX4G9hW}">
+                <field name="VAR" id="KDK/6?Hn7Guep_JPlTQm" variabletype="">green_y</field>
+                <value name="VALUE">
+                  <block type="color_rgbhsv_central_coordinate" id="DoR`g|3k/tb8S?l(fs[*">
+                    <field name="camera">chest</field>
+                    <field name="axis">1</field>
+                    <field name="hmin">40</field>
+                    <field name="hmax">60</field>
+                    <field name="smin">30</field>
+                    <field name="smax">120</field>
+                    <field name="vmin">100</field>
+                    <field name="vmax">200</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="aelos_if_else" id="f6|M8-5P89$6e@V0XAPE">
+                    <value name="condition">
+                      <block type="aelos_compare" id="%kp,Or-3prs2[I=[H3gk">
+                        <field name="OP">JBE</field>
+                        <value name="input_1">
+                          <block type="variables_get" id="!(30kuDcxUFK)4)$}?2`">
+                            <field name="VAR" id="(,680k=r`BADF.(5=%JN" variabletype="">green_x</field>
+                          </block>
+                        </value>
+                        <value name="input_2">
+                          <block type="math_number" id="Xs@,]B!C;IWv8]3J(!cO">
+                            <field name="NUM">370</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="if_do">
+                      <block type="1746753875808" id="pzTh|TKG.4Rb$JE_6u:I"></block>
+                    </statement>
+                    <statement name="else_do">
+                      <block type="aelos_if_else" id="003C:^IRMu{@vJnDU4{3">
+                        <value name="condition">
+                          <block type="aelos_compare" id="hFiXRTlWg0ihX#C=JB)G">
+                            <field name="OP">JAE</field>
+                            <value name="input_1">
+                              <block type="variables_get" id="#Wf6l{7m5iNK66vx1FGf">
+                                <field name="VAR" id="(,680k=r`BADF.(5=%JN" variabletype="">green_x</field>
+                              </block>
+                            </value>
+                            <value name="input_2">
+                              <block type="math_number" id="?d{Z3=@hX4tGmXsXTN5r">
+                                <field name="NUM">270</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="if_do">
+                          <block type="1746753884415" id="e./R7yz#ONIJrOMsIY+l"></block>
+                        </statement>
+                        <statement name="else_do">
+                          <block type="1746753869003" id="b5:pOj1#3ki}]wQ97:f!">
+                            <next>
+                              <block type="1746753930752" id="rF19u6kvd-W@zw7j2nw8">
+                                <next>
+                                  <block type="loop" id="5J(MlOSB`%c?wHIVY;lT"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="aelos_if" id="OJ:I8R]rKV;z(84xStj`" x="122" y="530">
+    <value name="condition">
+      <block type="identify_label_number" id="{:qzLtkiwWjy`jmF4Zew">
+        <field name="camera">chest</field>
+        <field name="number">11</field>
+      </block>
+    </value>
+    <statement name="do">
+      <block type="variables_set" id="XBfpFA:nyW@k!W;,n~K{">
+        <field name="VAR" id="auAnh]X#7igvJ5x@u$m!" variabletype="">tag_x</field>
+        <value name="VALUE">
+          <block type="read_distance" id="$X|qI#(O12lJ;B(1dy=R">
+            <field name="camera">chest</field>
+            <field name="number">11</field>
+            <field name="axis">x</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="Ue(j|yxu458L-,drh7=V">
+            <field name="VAR" id="Je=bn/0Kf!7StlrkM%jJ" variabletype="">tag_y</field>
+            <value name="VALUE">
+              <block type="read_distance" id="@Og0g{W#;6dX{KCwxx-r">
+                <field name="camera">chest</field>
+                <field name="number">11</field>
+                <field name="axis">y</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="3pWxiW7$P6)tJw}_y.Z%">
+                <field name="VAR" id=",U|)?%{oGRSZS?bI|4vW" variabletype="">tag_yaw</field>
+                <value name="VALUE">
+                  <block type="read_yaw_angle" id="i8ex{H}BG|13a_D+O*i8">
+                    <field name="camera">chest</field>
+                    <field name="number">11</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
